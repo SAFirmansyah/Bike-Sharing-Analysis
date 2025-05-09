@@ -9,7 +9,7 @@ st.set_page_config(page_title="Bike Sharing Dashboard", layout='wide')
 sns.set(style='dark')
 
 # load data
-df = pd.read_csv("data.csv")
+df = pd.read_csv("dashboard/data.csv")
 df['dateday'] = pd.to_datetime(df['dateday'])
 
 ## SIDEBAR ------------------------------------------------
@@ -18,7 +18,7 @@ max_date = df['dateday'].max()
 
 with st.sidebar:
     # Menambahkan logo
-    st.image("delivery-bike.png")
+    st.image("dashboard/delivery-bike.png")
 
     # Mengambil start_date dan end_date dari date_input
     start_date, end_date = st.date_input(
