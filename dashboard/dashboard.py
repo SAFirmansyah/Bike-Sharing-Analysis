@@ -52,7 +52,7 @@ with col3:
 workingday = main_df.iloc[:,[7,15]]
 workingday_result = workingday.groupby(by='workingday').sum().reset_index().sort_values('count', ascending=False)
 
-chart_1 = px.pie(workingday_result,
+chart_1 = px.bar(workingday_result,
               names='workingday',
               values='count',
               color_discrete_sequence=['yellow', 'green'],
