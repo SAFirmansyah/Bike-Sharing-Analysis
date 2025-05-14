@@ -55,7 +55,7 @@ workingday_result = workingday.groupby(by='workingday').sum().reset_index().sort
 chart_1 = px.bar(workingday_result,
               x='workingday',
               y='count',
-              color_discrete_sequence=['yellow', 'green'],
+              color_discrete_sequence=['yellow', 'skyblue'],
               title="Bike Users by Workday/Offday").update_layout(
                   xaxis_title='Workday/Offday',
                   yaxis_title='Total Users')
