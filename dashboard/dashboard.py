@@ -53,8 +53,8 @@ workingday = main_df.iloc[:,[7,15]]
 workingday_result = workingday.groupby(by='workingday').sum().reset_index().sort_values('count', ascending=False)
 
 chart_1 = px.bar(workingday_result,
-              names='workingday',
-              values='count',
+              x='workingday',
+              y='count',
               color_discrete_sequence=['yellow', 'green'],
               title="Bike Users by Workday/Offday").update_layout(
                   xaxis_title='Workday/Offday',
